@@ -1,3 +1,190 @@
+/* #region Fonts */
+
+@font-face {
+    font-family: 'gwedupower';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'micegothic-bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'micegothic-light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-01@1.0/MICEGothic Bold.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* #endregion */
+
 .hidden {
     display: none;
+}
+
+body {
+    text-align: center;
+
+    font-family: 'micegothic-light';
+    color: aliceblue;
+
+    background-color: rgb(17, 20, 22);
+}
+
+.center {
+    position: absolute;
+
+    width: 90vw;
+    right: 5vw;
+    
+    height: 20vh;
+    top: 30vh;
+
+    text-align: inherit;
+}
+
+#clock {
+    margin-bottom: 0px;
+
+    font-family: 'gwedupower';
+    font-size: 80px;
+}
+
+#login-form, #greeting {
+    margin-top: 0px;
+
+    font-size: 45px;
+
+    line-height: 30px;
+}
+
+#login-form > input {
+    margin-top: 30px;
+
+    width: 400px;
+    height: 30px;
+
+    text-align: center;
+
+    background: transparent;
+
+    font-size: 20px;
+
+    border-width: 5px;
+    border-radius: 5px;
+    border-color: aliceblue;
+
+    color: inherit;
+    font-family: inherit;
+}
+
+.bottom-center {
+    position: absolute;
+
+    width: 90vw;
+    right: 5vw;
+
+    height: 5vh;
+    bottom: 50px;
+
+    text-align: inherit;
+
+    font-size: 20px;
+}
+
+#quote > span:first-child {
+    font-size: inherit;
+}
+
+#quote > span:last-child {
+    font-size: 15px;
+}
+
+.top-left {
+    text-align: left;
+
+    font-size: 15px;
+
+    position: absolute;
+
+    width: 20vw;
+    left: 50px;
+
+    height: 90vh;
+    top: 50px;
+}
+
+#todo-form > input {
+    height: 25px;
+    width: 200px;
+
+    text-align: left;
+
+    background: transparent;
+
+    border-width: 3px;
+    border-radius: 5px;
+    border-color: aliceblue;
+
+    font-family: 'micegothic-bold';
+    font-size: 15;
+    color: aliceblue;
+}
+
+#todo-list > li > button {
+    border-radius: 10px;
+    background-color: rgb(252, 252, 252);
+    font-family: 'micegothic-light';
+    color:rgb(20, 20, 20)k;
+}
+
+#todo-list > li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    position: fixed;
+    left: 35px;
+}
+
+.bottom-right {
+    text-align: right;
+
+    position: fixed;
+
+    right: 50px;
+    bottom: 50px;
+
+    font-family: 'micegothic-bold';
+    font-size: 20px;
+}
+
+input#clock-type {
+    accent-color: #448fff;
+    width: 15px;
+    height: 15px;
+}
+
+.top-right {
+    text-align: right;
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+
+#weather > span:first-child {
+    font-family: 'micegothic-bold';
+    font-size: 25px;
+}
+
+#weather > span:last-child {
+    font-family: 'micegothic-light';
+    font-size: 15px;
 }

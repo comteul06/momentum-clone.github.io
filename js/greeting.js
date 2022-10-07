@@ -13,6 +13,45 @@ const USERNAME_KEY = "username";
 
 //#endregion
 
+//#region Variables
+
+const greetingWords = [
+    {
+        start: "What's up, ",
+        end: "?"
+    },
+    {
+        start: "Hey there, ",
+        end: "!"
+    },
+    {
+        start: "Having a nice day, ",
+        end: "?"
+    },
+    {
+        start: "Did you do well, ",
+        end: "?"
+    },
+    {
+        start: "Howdy do, ",
+        end: "?"
+    },
+    {
+        start: "Have a nice day, ",
+        end: "!"
+    },
+    {
+        start: "Hope you have a great day, ",
+        end: "!"
+    },
+    {
+        start: "A nice day for coding, ",
+        end: "!"
+    }
+]
+
+//#endregion
+
 //#region EventListeners
 
 function onLoginSubmit(event) {
@@ -26,7 +65,8 @@ function onLoginSubmit(event) {
 
 function paintGreetings(username) {
     greeting.classList.remove(HIDDEN_CLASSNAME);
-    greeting.innerText = `Hello ${username}!`;
+    const randomGreeting = greetingWords[Math.floor(Math.random() * greetingWords.length)];
+    greeting.innerText = `${randomGreeting.start} ${username}${randomGreeting.end}`;
 }
 
 //#endregion
