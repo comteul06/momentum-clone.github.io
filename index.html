@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <title>Momentum App</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 class="center" id="clock">00:00:00</h1>
+        
+        <form class="hidden, center" id="login-form">
+            <input
+                required
+                maxlength="15"
+                type="text"
+                placeholder="What is your name?"
+            />
+            <button>Log In</button>
+        </form>
+
+        <h1 class="hidden, center" id="greeting"></h1>
+    
+        <div class="bottom-center" id="quote">
+            <span></span><br>
+            <span></span>
+        </div>
+        
+        <span class="bottom-right" id="clock-type">
+            Use 24-hour clock <input type="checkbox" name="24-hour clock">
+        </span>
+    </div>
+
+    <!-- #region JS -->
+    <script src="js/greeting.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/background.js"></script>
+    <!-- #endregion -->
+</body>
+</html>
