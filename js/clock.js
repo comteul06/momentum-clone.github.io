@@ -1,8 +1,27 @@
-const clock = document.querySelector("#clock");
-const clockTypeCheckbox = document.querySelector("span#clock-type input");
+//#region HTML elements
 
-// 1 if 24, 0 if 12
+const clock = document.querySelector("#clock");
+const clockTypeCheckbox = document.querySelector("#clock-type");
+
+//#endregion
+
+//#region Constants
+
 const CLOCKTYPE_KEY = "clock-type";
+
+//#endregion
+
+//#region EventListeners
+
+function handleClockTypeCheckbox() {
+    savedClockType = clockTypeCheckbox.checked ? 1 : 0;
+    localStorage.setItem(CLOCKTYPE_KEY, savedClockType);
+    paintClock();
+}
+
+//#endregion
+
+//#region Functions
 
 function get24HourTime() {
     const date = new Date();
@@ -29,11 +48,7 @@ function paintClock() {
     clock.innerText = savedClockType == 1 ? get24HourTime() : get12HourTime();
 }
 
-function handleClockTypeCheckbox() {
-    savedClockType = clockTypeCheckbox.checked ? 1 : 0;
-    localStorage.setItem(CLOCKTYPE_KEY, savedClockType);
-    paintClock();
-}
+//#endregion
 
 let savedClockType = localStorage.getItem(CLOCKTYPE_KEY);
 if (localStorage.getItem(CLOCKTYPE_KEY) == null) {

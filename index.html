@@ -8,29 +8,44 @@
     <title>Momentum App</title>
 </head>
 <body>
-    <div class="wrapper">
-        <h1 class="center" id="clock">00:00:00</h1>
+    <div class="center">
+        <h1 id="clock">00:00:00</h1>
         
-        <form class="hidden, center" id="login-form">
+        <form class="hidden" id="login-form">
+            What is your name?<br>
             <input
                 required
                 maxlength="15"
                 type="text"
-                placeholder="What is your name?"
+                placeholder="Your name"
             />
-            <button>Log In</button>
         </form>
 
-        <h1 class="hidden, center" id="greeting"></h1>
+        <h1 class="hidden" id="greeting"></h1>
+    </div>
+
+    <div class="bottom-center" id="quote">
+        <span></span><br>
+        <span></span>
+    </div>
     
-        <div class="bottom-center" id="quote">
-            <span></span><br>
+    <div class="bottom-right">
+        Use 24-hour clock <input type="checkbox" name="24-hour clock" id="clock-type">
+    </div>
+
+    <div class="bottom-left">
+        <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and enter" required>
+        </form>
+    
+        <ul id="todo-list"></ul>
+    </div>
+
+    <div class="top-left">
+        <div id="weather">
+            <span></span>
             <span></span>
         </div>
-        
-        <span class="bottom-right" id="clock-type">
-            Use 24-hour clock <input type="checkbox" name="24-hour clock">
-        </span>
     </div>
 
     <!-- #region JS -->
@@ -38,6 +53,8 @@
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
     <!-- #endregion -->
 </body>
 </html>
